@@ -1,0 +1,113 @@
+﻿@model FPTEducationMVC.Models.UserLogin
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/loginstyle.css">
+</head>
+
+<body>
+    <section class="user">
+        <a class="user_close" href="@Url.ActionLink("Index","Home")">CLOSE</a>
+        <div class="user_options-container">
+            <div class="user_options-text">
+                <div class="user_options-unregistered">
+                    <h2 class="user_unregistered-title">Don't have an account?</h2>
+                    <p class="user_unregistered-text">Sign up to get the latest offer and benefit.</p>
+                    <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+                </div>
+
+                <div class="user_options-registered">
+                    <h2 class="user_registered-title">Have an account?</h2>
+                    <p class="user_registered-text">Login to see the latest benefits.</p>
+                    <button class="user_registered-login" id="login-button">Login</button>
+                </div>
+            </div>
+
+            <div class="user_options-forms" id="user_options-forms">
+                <div class="user_forms-login">
+                    <h2 class="forms_title">Login</h2>
+                    <form asp-action="Index" class="forms_form">
+                        <fieldset class="forms_fieldset">
+                            <div class="forms_field">
+                                <label asp-for="UserName" class="control-label"></label>
+                                <input asp-for="UserName" placeholder="UserName" class="forms_field-input" required autofocus />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="forms_field">
+                                <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </fieldset>
+                        <div class="forms_buttons">
+                            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+                            <input type="submit" value="Log In" class="forms_buttons-action">
+                        </div>
+                    </form>
+                </div>
+                <div class="user_forms-signup">
+                    <h2 class="forms_title">Sign Up</h2>
+                    <form class="forms_form">
+                        <fieldset class="forms_fieldset">
+                            <div class="forms_field">
+                                <label asp-for="UserName" class="control-label"></label>
+                                <input asp-for="UserName" placeholder="UserName" class="forms_field-input" required autofocus />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+@*                             <div class="forms_field">
+                                <input type="email" placeholder="Email" class="forms_field-input" required />
+                            </div> *@
+                            <div class="forms_field">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Enter passwords" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </fieldset>
+                        <div class="forms_buttons">
+                            <input type="submit" value="Sign up" class="forms_buttons-action">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        /**
+        * Variables
+        */
+        const signupButton = document.getElementById('signup-button'),
+            loginButton = document.getElementById('login-button'),
+            userForms = document.getElementById('user_options-forms')
+
+        /**
+         * Add event listener to the "Sign Up" button
+         */
+        signupButton.addEventListener('click', () => {
+            userForms.classList.remove('bounceRight')
+            userForms.classList.add('bounceLeft')
+        }, false)
+
+        /**
+         * Add event listener to the "Login" button
+         */
+        loginButton.addEventListener('click', () => {
+            userForms.classList.remove('bounceLeft')
+            userForms.classList.add('bounceRight')
+        }, false)</script>
+</body>
+
+</html>

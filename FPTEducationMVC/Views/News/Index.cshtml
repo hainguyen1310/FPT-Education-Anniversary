@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BusinessLogic.Model.News>
+
+@{
+	ViewData["Title"] = "Index";
+}
+<div id="cardslider">
+	<p class="cardslider__title">What the Press says about FE?</p>
+	<ul class="cards">
+		@foreach (var item in Model)
+		{
+			string url = @item.NewsId + ".png";
+			<li>
+				<a href="https://chungta.vn/kinh-doanh/hanh-trinh-fpt-mo-duong-dua-tri-tue-viet-nam-ra-the-gioi-1138846.html#:~:text=Sau%2035%20n%C4%83m%20h%C3%ACnh%20th%C3%A0nh,gi%E1%BB%9Bi%20(Fortune%20Global%20500)."
+				   class="card">
+					<img src="~/img/@url" class="card__image" alt="" />
+					<div class="card__overlay">
+						<div class="card__header">
+							<svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+								<path />
+							</svg>
+							<img class="card__thumb" src="https://chungta.vn/kinh-doanh/hanh-trinh-fpt-mo-duong-dua-tri-tue-viet-nam-ra-the-gioi-1138846.html#:~:text=Sau%2035%20n%C4%83m%20h%C3%ACnh%20th%C3%A0nh,gi%E1%BB%9Bi%20(Fortune%20Global%20500)." alt="" />
+							<div class="card__header-text">
+								<h3 class="card__title">@Html.DisplayFor(modelItem => item.Title)</h3>
+								<span class="card__status">@Html.DisplayFor(modelItem => item.NewsTime)</span>
+							</div>
+						</div>
+						<p class="card__description">@Html.DisplayFor(modelItem => item.Description)</p>
+					</div>
+				</a>
+			</li>
+		}
+	</ul>
+	<div class="footer">
+		<div id="share" class="share-parent">
+			<div class="info-txt-ap">
+				Được tạo bởi <a href="#">Cầm kì thi họa team</a>
+			</div>
+			<div class="copy-link">
+				<h1 class="head-link">FEEducation25years.io</h1>
+				<div class="info-txt">
+					<a href="#" class="back-to-top w--current">Back to top</a>
+				</div>
+			</div>
+			<div class="draw-line-top">
+				<div class="draw-line-inner-top"></div>
+			</div>
+		</div>
+	</div>
+</div>

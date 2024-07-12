@@ -1,0 +1,377 @@
+﻿@model IEnumerable<FPTDTO.TopicDTO>
+
+@{
+	ViewData["Title"] = "Index";
+}
+<div id="field">
+	<div class="w-embed">
+		<style>
+			body {
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				overflow-y: overlay;
+			}
+
+
+
+			.pulse-dot-map {
+				width: 15px;
+				height: 15px;
+				border-radius: 100px;
+				animation: out 2s infinite ease-out;
+				background: #6c0e11;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				/* z-index;
+																													  99999; */
+				margin: -25px 0px 0px -25px;
+			}
+
+				.pulse-dot-map.two {
+					width: 15px;
+					height: 15px;
+					border-radius: 100px;
+					animation: out 2.5s infinite ease-out;
+					background: #6c0e11;
+					position: fixed;
+					top: 30%;
+					left: 30%;
+					/* z-index;
+																													  99999; */
+					margin: -25px 0px 0px -25px;
+				}
+
+				.pulse-dot-map.three {
+					width: 15px;
+					height: 15px;
+					border-radius: 100px;
+					animation: out 2.5s infinite ease-out;
+					background: #6c0e11;
+					position: fixed;
+					top: 20%;
+					left: 76%;
+					/* z-index;
+																													  99999; */
+					margin: -25px 0px 0px -25px;
+				}
+
+			@@keyframes out {
+				0% {
+					box-shadow: 0px 0px 0px 0px rgba(108, 14, 17, 1);
+				}
+
+				100% {
+					box-shadow: 0px 0px 0px 100px rgba(108, 14, 17, 0.0);
+				}
+			}
+
+			.map-bg {
+				background-blend-mode: multiply;
+				mix-blend-mode: multiply;
+			}
+		</style>
+	</div>
+	<div id="goonies" data-w-id="bdd0030d-c334-dfdc-08e0-2230f0ed544d" style="opacity: 0" class="scroll-container-1">
+		<div class="sticky-container-1">
+			<div data-w-id="4e9d6419-3f2a-0405-3947-e49d986bef2e" class="close-video" style="opacity: 0">
+				Close
+			</div>
+
+			<div class="full-inner">
+				<div data-w-id="34b36b12-584f-4f70-d05b-54e685b2cf2e" style="
+              transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              width: 25%;
+              transform-style: preserve-3d;
+					" class="img-parent-1">
+					<div id="myDiv" data-w-id="1b88a246-cf95-94ee-3710-0294d1253315" class="info-parent-1"
+						 style="opacity: 0.01">
+						<div class="infor-title" style="display: flex; flex-direction: row">
+							<h2 class="img-head-2" style="text-align: center; width: 490px">
+								Artificial Intelligence
+							</h2>
+							<p class="text-a-3" style="text-align: center; width: 630px">
+								Artificial Intelligence is the simulation of human intelligence processes
+							</p>
+						</div>
+
+
+						@foreach (var item in Model.Where(c => c.TopicCategoryName.Equals("Artificial Intelligence")))
+						{
+							<div class="card" style="display: flex; flex-direction: row">
+								<div data-w-id="e665a47e-03df-db32-28f5-b1ac2eaa5067" class="info-head-parent" style="
+                    opacity: 0;
+                    width: 50%;
+                    background-image: url('https://fpt.ai/sites/default/files/inline-images/MicrosoftTeams-image%20%28206%29.png');
+														"></div>
+								<div data-w-id="be85670b-7820-585c-b9d0-d04cf41f0417" class="info-content-parent"
+									 style="opacity: 0; width: 50%">
+									<p class="text-a-3">
+										@Html.DisplayFor(modelItem => item.TopicTitle)
+									</p>
+									<p class="text-a-4">
+										@Html.DisplayFor(modelItem => item.Content)
+									</p>
+								</div>
+							</div>
+
+
+						}
+					</div>
+					<div data-w-id="697d02a9-65dd-8d45-8c61-f13fd234974d"
+						 class="overlay-img-1"
+						 style="opacity: 1"></div>
+					<div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+						 class="vd-1 w-background-video w-background-video-atom">
+						<img src="./home/AI.jpg" alt="" style="width: 100%; filter: brightness(0.3)" />
+					</div>
+					<div data-w-id="34b36b12-584f-4f70-d05b-54e685b2cf30" class="img-cast-1" style="
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                opacity: 1;
+						"></div>
+					<div data-w-id="34b36b12-584f-4f70-d05b-54e685b2cf31" class="img-content-parent" style="
+                transform: translate3d(0px, 120%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+						">
+						<h2 class="img-head">AI</h2>
+						<div class="btn-parent">
+							<a href="https://the-goonies.webflow.io/#" class="link">More</a><img src="./home/5d00256012408bddc81a0512_arrow.png" width="15" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div data-w-id="79094ce1-7308-6f1a-1195-92d44a0ac751" style="
+				transform: translate3d(0%, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				width: 25%;
+				" class="img-parent-2">
+					<div id="myDiv-1" data-w-id="602cc19b-fb96-91cd-ea93-7e2ca08404fc" class="info-parent-2"
+						 style="display: none; opacity: 0">
+						<div class="infor-title" style="display: flex; flex-direction: row">
+							<h2 class="img-head-2" style="text-align: center; width: 490px">
+								Digital Transformation
+							</h2>
+							<p class="text-a-3" style="text-align: center; width: 630px">
+								Empower Your Future with Digital Transformation
+							</p>
+						</div>
+
+						@foreach (var item in Model.Where(c => c.TopicCategoryName.Equals("Digital Transformation")))
+						{
+							<div class="card" style="display: flex; flex-direction: row">
+								<div data-w-id="602cc19b-fb96-91cd-ea93-7e2ca08404fe" class="info-head-parent _1" style="
+				opacity: 0;
+				width: 50%;
+				background-image: url('https://fpt.ai/sites/default/files/inline-images/MicrosoftTeams-image%20%28206%29.png');
+									"></div>
+								<div data-w-id="602cc19b-fb96-91cd-ea93-7e2ca08404ff" class="info-content-parent"
+									 style="opacity: 0; width: 50%">
+									<p class="text-a-3">
+										@Html.DisplayFor(modelItem => item.TopicTitle)
+									</p>
+									<p class="text-a-4">
+										@Html.DisplayFor(modelItem => item.Content)
+									</p>
+								</div>
+							</div>
+						}
+
+					</div>
+					<div data-w-id="79094ce1-7308-6f1a-1195-92d44a0ac752" class="overlay-img-2" style="opacity: 1"></div>
+					<div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+						 class="vd-2 w-background-video w-background-video-atom">
+						<img src="./home/chuyen-doi-so-3.jpg" alt="" style="width: 100%; filter: brightness(0.3)" />
+					</div>
+					<div data-w-id="79094ce1-7308-6f1a-1195-92d44a0ac754" class="img-cast-2" style="
+				transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				opacity: 1;
+				"></div>
+					<div data-w-id="79094ce1-7308-6f1a-1195-92d44a0ac755" class="img-content-parent" style="
+				transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				">
+						<h2 class="img-head">Digital Tansformation</h2>
+						<div class="btn-parent">
+							<a href="https://the-goonies.webflow.io/#" class="link">More</a><img src="./home/5d00256012408bddc81a0512_arrow.png" width="15" alt="" />
+						</div>
+					</div>
+				</div>
+				<div data-w-id="9919f10a-0cf1-d01b-2179-0e43b89a145d" style="
+				transform: translate3d(0%, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				width: 25%;
+				" class="img-parent-3">
+					<div data-w-id="9919f10a-0cf1-d01b-2179-0e43b89a145e" class="overlay-img-3" style="opacity: 1"></div>
+					<div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+						 class="vd-3 w-background-video w-background-video-atom">
+						<img src="./home/xe-dien-2.jpg" alt="" style="width: 100%; filter: brightness(0.3)" />
+					</div>
+					<div data-w-id="9919f10a-0cf1-d01b-2179-0e43b89a1460" class="img-cast-3" style="
+				transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				opacity: 1;
+				"></div>
+					<div data-w-id="9919f10a-0cf1-d01b-2179-0e43b89a1461" class="img-content-parent" style="
+				transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				">
+						<h2 class="img-head">Electric Car</h2>
+						<div class="btn-parent">
+							<a href="https://the-goonies.webflow.io/#" class="link">More</a><img src="./home/5d00256012408bddc81a0512_arrow.png" width="15" alt="" />
+						</div>
+					</div>
+					<div id="myDiv-2" data-w-id="a7d4b4bc-6acd-6d44-8c84-e6954ddaa24e" class="info-parent-3"
+						 style="opacity: 0.01">
+						<div class="infor-title" style="display: flex; flex-direction: row">
+							<h2 class="img-head-2" style="text-align: center; width: 490px">
+								Electric Car
+							</h2>
+							<p class="text-a-3" style="text-align: center; width: 630px">
+								Charge Ahead with Clean Energy
+							</p>
+						</div>
+
+						@foreach (var item in Model.Where(c => c.TopicCategoryName.Equals("Electric Car")))
+						{
+							<div class="card" style="display: flex; flex-direction: row">
+								<div data-w-id="a7d4b4bc-6acd-6d44-8c84-e6954ddaa250" class="info-head-parent _3" style="
+				opacity: 0;
+				width: 50%;
+				background-image: url('https://fpt.ai/sites/default/files/inline-images/MicrosoftTeams-image%20%28206%29.png');
+									"></div>
+								<div data-w-id="a7d4b4bc-6acd-6d44-8c84-e6954ddaa251" class="info-content-parent"
+									 style="opacity: 0; width: 50%">
+									<p class="text-a-3">
+										@Html.DisplayFor(modelItem => item.TopicTitle)
+									</p>
+									<p class="text-a-4">
+										@Html.DisplayFor(modelItem => item.Content)
+									</p>
+								</div>
+							</div>
+
+						}
+					</div>
+				</div>
+				<div data-w-id="2ff84a05-2905-9869-b0e9-ee8f9c2991c1" style="
+				transform: translate3d(0%, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				width: 25%;
+				" class="img-parent-4">
+					<div id="myDiv-3" data-w-id="cee2d40d-00b3-df63-99a1-8984a30d2029" class="info-parent-4"
+						 style="display: none; opacity: 0">
+						<div class="infor-title" style="display: flex; flex-direction: row">
+							<h2 class="img-head-2" style="text-align: center; width: 490px">
+								Semiconducter
+								
+							</h2>
+							<p class="text-a-3" style="text-align: center; width: 630px">
+								Semiconducter: The Core of Advancement
+							</p>
+						</div>
+						
+
+							@foreach (var item in Model.Where(c => c.TopicCategoryName.Equals("Integrated Circuit")))
+							{
+							<div class="card" style="display: flex; flex-direction: row">
+								<div data-w-id="cee2d40d-00b3-df63-99a1-8984a30d202b" class="info-head-parent _4" style="
+				opacity: 0;
+				width: 50%;
+				background-image: url('https://fpt.ai/sites/default/files/inline-images/MicrosoftTeams-image%20%28206%29.png');
+								"></div>
+								<div data-w-id="cee2d40d-00b3-df63-99a1-8984a30d202c" class="info-content-parent"
+									 style="opacity: 0; width: 50%">
+									<p class="text-a-3">
+										@Html.DisplayFor(modelItem => item.TopicTitle)
+									</p>
+									<p class="text-a-4">
+										@Html.DisplayFor(modelItem => item.Content)
+									</p>
+								</div>
+							</div>
+							}
+
+						
+					</div>
+					<div data-w-id="2ff84a05-2905-9869-b0e9-ee8f9c2991c2" class="overlay-img-4" style="opacity: 1"></div>
+					<div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+						 class="vd-4 w-background-video w-background-video-atom">
+						<img src="./home/ban-dan.jpg" alt="" style="width: 100%; filter: brightness(0.3)" />
+					</div>
+					<div data-w-id="2ff84a05-2905-9869-b0e9-ee8f9c2991c4" style="
+				opacity: 1;
+				transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				" class="img-cast-4"></div>
+					<div data-w-id="2ff84a05-2905-9869-b0e9-ee8f9c2991c5" style="
+				opacity: 1;
+				transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1)
+				rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+				transform-style: preserve-3d;
+				" class="img-content-parent">
+						<h2 class="img-head">Semiconducter</h2>
+						<div class="btn-parent">
+							<a href="" class="link">More</a><img src="./home/5d00256012408bddc81a0512_arrow.png" width="15" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="./home/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="./home/webflow.e5139dd03.js" type="text/javascript"></script>
+	<script>
+		$(".map-parent").click(function () {
+			document
+				.getElementsByTagName("body")[0]
+				.setAttribute("style", "overflow:hidden");
+		});
+
+		$(".close-video").click(function () {
+			document
+				.getElementsByTagName("body")[0]
+				.setAttribute("style", "overflow:auto");
+		});
+
+		$(".close-map").click(function () {
+			document
+				.getElementsByTagName("body")[0]
+				.setAttribute("style", "overflow:auto");
+		});
+	</script>
+
+	<script>
+		function myFunction() {
+			/* Get the text field */
+			var copyText = document.getElementById("myInput");
+
+			/* Select the text field */
+			copyText.select();
+
+			/* Copy the text inside the text field */
+			document.execCommand("copy");
+
+			/* Alert the copied text */
+			alert("Copied the text: " + copyText.value);
+		}
+	</script>
+
+	<script src="./home/react.production.min.js" id="React"></script>
+	<script src="./home/react-dom.production.min.js" id="ReactDOM"></script>
+	<script src="./home/widget.js" id="UdeslyCountUp"></script>
+</div>

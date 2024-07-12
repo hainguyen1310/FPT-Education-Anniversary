@@ -1,0 +1,78 @@
+﻿@model IEnumerable<BusinessLogic.Model.Achievement>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div id="achivement">
+	@{
+		int count = 0;
+		var achievementList = Model.ToList();
+	}
+	@for (int i = 0; i < achievementList.Count; i += 5)
+	{
+		<div class="achivement__row">
+			@for (int j = i; j < i + 3; j++)
+			{
+				@if (j % 5 == 0)
+				{
+					<div class="achivement__row--item achivement__row--item1 col-md-3">
+						<p class="title-main">@Html.DisplayFor(achievement => achievementList[j].AchievementTitle)</p>
+						<div class="achivement-info">
+							<p class="achivement-name">@Html.DisplayFor(achievement => achievementList[j].AchievementSubtitle)</p>
+							<p class="achivement-sub">@Html.DisplayFor(achievement => achievementList[j].AchievementDescription)</p>
+						</div>
+					</div>
+				}
+				@if (j % 5 == 1)
+				{
+					<div class="achivement__row--item achivement__row--item2 col-md-6">
+						<p class="title-main"></p>
+						<div class="achivement-info">
+							<p class="achivement-name">@Html.DisplayFor(achievement => achievementList[j].AchievementSubtitle)</p>
+							<p class="achivement-sub"></p>
+						</div>
+					</div>
+				}
+				@if (j % 5 == 2)
+				{
+					<div class="achivement__row--item col-md-3">
+						<p class="title-main">@Html.DisplayFor(achievement => achievementList[j].AchievementTitle)</p>
+						<div class="achivement-info">
+							<p class="achivement-name">@Html.DisplayFor(achievement => achievementList[j].AchievementSubtitle)</p>
+							<p class="achivement-sub">@Html.DisplayFor(achievement => achievementList[j].AchievementDescription)</p>
+						</div>
+					</div>
+				}
+			}
+		</div>
+
+		<div class="achivement__row">
+			@for (int j = i + 3; j < i + 5; j++)
+			{
+				@if (j % 5 == 3)
+				{
+					<div class="achivement__row--item achivement__row--item4 col-md-7">
+						<p class="title-main">@Html.DisplayFor(achievement => achievementList[j].AchievementTitle)</p>
+						<div class="achivement-info">
+							<p class="achivement-name"></p>
+							<p class="achivement-sub"></p>
+						</div>
+					</div>
+				}
+				@if (j % 5 == 4)
+				{
+					<div class="achivement__row--item col-md-5">
+						<p class="title-main">@Html.DisplayFor(achievement => achievementList[j].AchievementTitle)</p>
+						<div class="achivement-info">
+							<p class="achivement-name">@Html.DisplayFor(achievement => achievementList[j].AchievementSubtitle)</p>
+							<p class="achivement-sub">@Html.DisplayFor(achievement => achievementList[j].AchievementDescription)</p>
+						</div>
+					</div>
+				}
+				
+			}
+
+		</div>
+	}
+</div> 

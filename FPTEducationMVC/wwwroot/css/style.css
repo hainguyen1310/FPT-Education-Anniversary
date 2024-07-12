@@ -1,0 +1,877 @@
+/*Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Có hiệu ứng cuộn khi href vào */
+    font-family: 'Sharp Grotesk Book 25 Regular';}
+
+/* 
+   1.Vị trí
+   2. Kích thước
+   3. Màu sắc
+   4. Kiểu dáng (kiểu chữ, hình tròn, vuông,....)
+   */
+.clear {
+    /* #content .memberlist Xuống phần này để hiểu rõ */
+    clear: both;
+}
+
+/*select có value="" nghĩa là nó có giá trị không hợp lệ thì màu nâu được hiển thị*/
+select:required:invalid {
+    color: gray;
+}
+
+/*option có value="" và trạng thái disabled không được hiển thị khi nhấn vào mũi tên tam giác. Bình thường thì nó vẫn được hiển thị*/
+option[value=""][disabled] {
+    display: none;
+}
+
+/*option có màu đen */
+option {
+    color: black;
+}
+
+ul.navbar-nav {
+    width: 100%;
+    /* border-bottom: 1px solid white; */
+    justify-content: space-around;
+}
+
+a.nav-link {
+    color: white;
+    font-size: 20px;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+    a.nav-link:hover {
+        color: #F2610D;
+    }
+
+    a.nav-link:focus {
+        color: #F2610D;
+    }
+
+/* BEGIN NAV */
+nav.navbar {
+    z-index: 10;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+img.nav__logo {
+    width: 70%;
+}
+
+a.navbar-brand {
+    width: 20%;
+    padding: 0 0 0 20px;
+    text-align: center;
+}
+.navbar-light .navbar-nav .nav-link {
+    /* color: rgba(0, 0, 0, .55); */
+    color: white;
+    display: flex;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #F2610D;
+}
+/* BEGIN SLIDER */
+#slider {
+    background-size: cover;
+    background-image: url(../img/backslider.jpg);
+    position: relative;
+    height: 100vh;
+    bottom: 125px;
+    filter: brightness(0.8);
+}
+
+video.slider-video {
+    width: 100%;
+}
+
+#slider {
+    background-image: url(../img/backslider.jpg);
+}
+
+img.backpng {
+    animation: animate 5s linear infinite;
+    width: 79%;
+    position: relative;
+    filter: brightness(0.9);
+    bottom: 40px;
+}
+
+@keyframes animate {
+
+    0%, 100% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+}
+
+.slider__title {
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    position: relative;
+    /* bottom: 340px; */
+    top: 45%;
+    font-size: 60px;
+    font-weight: 300;
+    color: white;
+    left: 50%;
+}
+
+.slider__achive--item {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 320px;
+    display: none;
+}
+
+.slider__item {
+    font-size: 60px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Add shadow to make text stand out */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+h1.slider__item {
+    position: relative;
+    bottom: 70%;
+    left: 50%;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    color: #F26109;
+    font-size: 40px;
+    width: fit-content;
+    line-height: 65px;
+}
+
+span.changecontent::after {
+    content: ' ';
+    color: white;
+    animation: changetext 15s infinite linear;
+}
+
+@keyframes changetext {
+    0% {
+        content: "Sustainable Development";
+    }
+
+    33% {
+        content: "Experiential School";
+    }
+
+    66% {
+        content: "International Students";
+    }
+
+    0% {
+        content: "Sustainable Development";
+    }
+
+    10% {
+        content: "Experiential School";
+    }
+
+    20% {
+        content: "International Students";
+    }
+
+    30% {
+        content: "Sustainable Development";
+    }
+
+    40% {
+        content: "Experiential School";
+    }
+
+    50% {
+        content: "International Students";
+    }
+
+    60% {
+        content: "Sustainable Development";
+    }
+
+    70% {
+        content: "Experiential School";
+    }
+
+    80% {
+        content: "International Students";
+    }
+
+    90% {
+        content: "Sustainable Development";
+    }
+
+    100% {
+        content: "Experiential School";
+    }
+}
+
+video.slider-video {
+    width: 100%;
+    filter: brightness(0.8) blur(0.5px);
+}
+
+.row.content-ss3 {
+    width: 100%;
+}
+
+/* BEGIN FIELS */
+#field {
+    height: 100vh;
+    position: relative;
+    bottom: 125px;
+    background-color: black;
+}
+
+/* BEGIN ACHIVEMENT */
+div#achivement {
+    position: relative;
+    bottom: 127px;
+}
+
+.achivement__row {
+    display: flex;
+}
+
+.achivement__row--item {
+    text-align: center;
+    /* margin: 20px; */
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid #333;
+    height: 50vh;
+}
+
+.achivement__row--item {
+    text-align: center;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.achivement__row--item4 {
+    background-image: url(../img/sinhvien.png);
+    background-size: cover;
+}
+
+    .achivement__row--item4 .title-main {
+        top: 0px;
+    }
+
+.achivement__row--item2 {
+    background-image: url(../img/Presentation.png);
+    background-size: cover;
+}
+
+    .achivement__row--item2 .achivement-info .achivement-name {
+        font-size: 42px;
+        position: relative;
+        bottom: 170px;
+    }
+
+.achivement__row--item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.achivement__row--item p,
+.achivement__row--item .achivement-info {
+    position: relative;
+    z-index: 2;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+}
+
+.title-main {
+    font-size: 48px;
+    margin: 0;
+}
+
+.achivement-name {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.achivement-sub {
+    font-size: 13px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.title-main {
+    font-size: 48px;
+    margin: 0;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+}
+
+.achivement-name {
+    font-size: 17px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.achivement-sub {
+    margin: 10px 0;
+}
+
+.achivement-info {
+    position: relative;
+    top: 50%;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+p.title-main {
+    position: relative;
+    top: 30%;
+    /* height: 50px; */
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+    p.title-main:hover {
+        color: #ff6900;
+    }
+
+/* BEGIN HISTORYPAGE */
+#historypage {
+    background-image: url(../img/slider1.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    bottom: 128px;
+}
+
+.col-md-6.title-ss4-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    font-size: 25px;
+    padding: 55px;
+}
+
+body {
+    background-color: white !important;
+    font-family: auto;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+element.style {
+    font-size: 40px;
+    font-weight: 700;
+    color: #F2610F;
+}
+
+p.title-ss4.heading-1 {
+    color: #E97131;
+    font-weight: 800;
+}
+
+div#scrollview-section3 {
+    position: relative;
+    left: 12px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p.title-ss4-1.heading-6 {
+    font-size: 20px;
+    color: #F2610D;
+    font-weight: 700;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+}
+
+p.title-ss4-1.heading-4 {
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    color: #F2610D;
+    font-weight: 600;
+}
+
+.content-ss4 {
+    padding-bottom: 25px;
+}
+
+/* BEGIN BÁO CHÍ NÓI GÌ VỀ FPT */
+@import url(https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular);
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.heading {
+    font-size: 1.5rem;
+    /* Adjust size as needed */
+    color: #ff6600;
+    /* Adjust color as needed */
+    line-height: 1.2;
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    /* Adjust spacing as needed */
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    /* Positioning to match the design */
+    top: 40px;
+    /* Adjust the top position */
+    left: 70px;
+    /* Adjust the left position */
+    z-index: 10;
+    /* Ensure it stays on top */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Adding shadow to text */
+    animation: fadeIn 2s ease-in-out;
+    /* Add animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading span {
+    color: #ff6600;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 400px !important;
+    height: auto;
+    max-width: none;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .0.5s ease-in-out;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .0.5s ease-in-out;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+    .card__arc path {
+        fill: var(--surface-color);
+        d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+    }
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for various browsers */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+    .cards::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera*/
+    }
+
+/* Additional styles to ensure horizontal scrolling looks good */
+.card {
+    min-width: 300px;
+    /* Set a minimum width for each card */
+    flex-shrink: 0;
+    /* Prevent cards from shrinking */
+    scroll-snap-align: start;
+    /* Optional: Enables snap scrolling for each card */
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 2rem 5vw;
+    }
+
+    .card__image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    .cards {
+        margin: 1rem 5vw;
+    }
+}
+
+/* Optional: Adjustments for horizontal scrolling */
+@media (max-width: 1200px) {
+    .cards {
+        flex-wrap: nowrap;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+        .cards::-webkit-scrollbar {
+            display: none;
+        }
+
+    .card {
+        min-width: 250px;
+    }
+}
+
+#cardslider {
+    background-image: url(../img/slider2.png);
+    height: 92vh;
+}
+
+p.cardslider__title {
+    font-family: 'Sharp Grotesk Book 25 Regular';
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+    color: #F26109;
+    text-shadow: 2px 2px 5px rgba(2, 0, 0, 0.3);
+}
+
+.footer {
+    /* display: inline-block; */
+    text-align: center;
+    padding: 20px 0;
+    background: black;
+    color: #121212;
+}
+
+a.back-to-top.w--current:hover {
+    color: #F26109;
+}
+
+/* Chat Button */
+.chatBtn {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B, #FF2525, #FFE53B);
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: fixed;
+    right: 60px;
+    bottom: 40px;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+    z-index: 9999;
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    opacity: 0;
+    background-color: rgb(255, 180, 82);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.chatBtn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.chatBtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+/* Chat Card */
+.chat-card {
+    display: none;
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+    width: 300px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .chat-header .h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+.chat-body {
+    padding: 15px;
+    background-color: #f9f9f9;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 1.4;
+}
+
+.incoming {
+    background-color: #e1e1e1;
+    align-self: flex-start;
+}
+
+.outgoing {
+    background-color: #cce5ff;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.message p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.chat-footer {
+    padding: 10px;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 80px;
+}
+
+    .chat-footer input[type="text"] {
+        flex-grow: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .chat-footer button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        background-color: #ff6600;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .chat-footer button:hover {
+            background-color: #0f9d58;
+        }
+
+@keyframes chatAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-card .message {
+    animation: chatAnimation 0.3s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+}
+
+    .chat-card .message:nth-child(even) {
+        animation-delay: 0.2s;
+    }
+
+    .chat-card .message:nth-child(odd) {
+        animation-delay: 0.3s;
+    }
+.message.incoming {
+    position: relative;
+    height: 73px;
+    left: 5px;
+    z-index:0;
+}
+.message.outgoing {
+    position: relative;
+    height: 60px;
+    left: 90px;
+}

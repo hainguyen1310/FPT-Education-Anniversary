@@ -1,0 +1,55 @@
+/* MOBILE  */
+@media(max-width: 740px) {
+    #slider {
+        background-image: url(/assets/img/backslider.jpg);
+        height: 300px;
+    }
+    img.nav__logo {
+        width: 100%;
+    }
+    img.backpng {
+        animation: animate 5s linear infinite;
+        width: 100%;
+        position: relative;
+        filter: brightness(0.9);
+        top: 10px;
+    }
+    h1.slider__item {
+        display: none;
+    }
+    div#achivement {
+        position: relative;
+        top: 543px;
+    }
+    .achivement__row {
+        display: block;
+    }
+    .achivement__row--item2 .achivement-info .achivement-name {
+        font-size: 42px;
+        position: relative;
+        bottom: 226px;
+    }
+    #historypage {
+        background-image: url(/assets/img/slider1.png);
+        background-size: cover;
+        height: 100vh;
+        position: static;
+    }
+    div#scrollview-section3 {
+        position: relative;
+        left: 12px;
+        top: 145px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #cardslider {
+        background-image: url(/assets/img/slider2.png);
+        height: 92vh;
+        position: relative;
+        top: 112px;
+    }
+    p.cardslider__title {
+        padding: 60px 10px 0px 30px;
+        font-size: 26px;
+    }
+}

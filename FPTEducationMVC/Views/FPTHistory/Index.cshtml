@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BusinessLogic.Model.FPTHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="historypage">
+    <div class="row content-ss3">
+
+        <div class="col-md-6 title-ss4-body">
+            <div class="line-af">
+                <div style="flex: 1;">
+                    <p class="title-ss4 heading-1">FPT Education<br></p>
+                </div>
+                <div class="img-ss3"></div>
+            </div>
+            <div>
+                <p class="title-ss4 heading-1">"Technology - International - Success"</p>
+            </div>
+        </div>
+        <div class="col-md-6 content-ss4-body hide-scrollbar" id="scrollview-section3"
+             style="overflow-y: auto;height: 80vh;">
+            @foreach(var item in Model)
+            {
+            <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">0 @Html.DisplayFor(modelItem => item.FPTHistoryId).</p>
+                    <p class="title-ss4-1 heading-4">@Html.DisplayFor(modelItem => item.Title)</p><span class="content-ss4-1 body-lg">
+                        @Html.DisplayFor(modelItem => item.Content)
+                </span>
+            </div>
+            }
+            @* <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">02.</p>
+                <p class="title-ss4-1 heading-4">“Du học ngắn hạn” ở nước ngoài từ năm đầu tiên</p><span class="content-ss4-1 body-lg">
+                    Ngoài học kỳ Tiếng Anh nước ngoài, sinh viên Trường Đại học FPT được “du học
+                    ngắn hạn” ở các quốc gia trên khắp thế giới trong học kỳ chuyên ngành và chương trình trao đổi quốc
+                    tế.
+                </span>
+            </div>
+            <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">03.</p>
+                <p class="title-ss4-1 heading-4">Thành thạo 02 ngoại ngữ, sẵn sàng phát triển sự nghiệp toàn cầu</p><span class="content-ss4-1 body-lg">
+                    Sinh viên được cấp 100% giáo trình bản quyền quốc tế bằng Tiếng Anh. Đồng
+                    thời, được học tập trong Little UK (Nước Anh thu nhỏ) - mô hình mô phỏng môi trường, văn hóa nước Anh bên
+                    trong Campus. Bên cạnh, nhà trường cung cấp cho sinh viên nguồn học liệu quốc tế - tài khoản Coursera miễn
+                    phí.
+                </span>
+            </div>
+            <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">04.</p>
+                <p class="title-ss4-1 heading-4">On The Job Training - làm việc thực tế tại doanh nghiệp từ năm thứ 3</p>
+                <span class="content-ss4-1 body-lg">
+                    Bước vào học kỳ OJT (HK6), sinh viên được học tập, đào tạo trực tiếp tại
+                    doanh nghiệp từ 4 - 8 tháng. Từ đó, có cơ hội tích lũy nghiệp vụ chuyên môn từ công việc và trải nghiệm
+                    thực tế.
+                </span>
+            </div>
+            <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">05.</p>
+                <p class="title-ss4-1 heading-4">Nhận offer săn đón hấp dẫn từ doanh nghiệp ngay sau tốt nghiệp</p><span class="content-ss4-1 body-lg">
+                    Nhà trường tạo đa dạng cơ hội hàng kỳ để sinh viên được gặp gỡ, ứng tuyển
+                    với các doanh nghiệp hàng đầu trong và ngoài nước thông qua các sự kiện như: FPTU Career Fair, FPTU Job
+                    Fair, Lễ Bảo vệ đồ án tốt nghiệp…
+                </span>
+            </div>
+            <hr style="height: 1px ;border: 1px solid #fff;margin-bottom: 24px; ">
+            <div class="content-ss4">
+                <p class="title-ss4-1 heading-6">06.</p>
+                <p class="title-ss4-1 heading-4">Trang bị tinh thần, văn hóa khởi nghiệp từ giảng đường</p><span class="content-ss4-1 body-lg">
+                    Kiến thức khởi nghiệp được đào tạo thông qua các học phần, buổi gặp gỡ doanh
+                    nghiệp, sự kiện liên quan. Sinh viên được trực tiếp hướng dẫn bởi những chuyên gia, Founder và C-level từ
+                    các startup nổi bật trong và ngoài nước.
+                </span>
+            </div> *@
+        </div>
+    </div>
+</div>
