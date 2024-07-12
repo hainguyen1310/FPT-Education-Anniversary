@@ -1,0 +1,47 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CloneGithub\\FPT-Education-Anniversary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECE6E5F5-9F11-470C-ABC4-5ECF974B02DD}|API\\API.csproj|d:\\clonegithub\\fpt-education-anniversary\\api\\controllers\\gptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECE6E5F5-9F11-470C-ABC4-5ECF974B02DD}|API\\API.csproj|solutionrelative:api\\controllers\\gptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 199,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GPTController.cs",
+              "DocumentMoniker": "D:\\CloneGithub\\FPT-Education-Anniversary\\API\\Controllers\\GPTController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\GPTController.cs",
+              "ToolTip": "D:\\CloneGithub\\FPT-Education-Anniversary\\API\\Controllers\\GPTController.cs",
+              "RelativeToolTip": "API\\Controllers\\GPTController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAiwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T15:15:04.559Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 43,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
